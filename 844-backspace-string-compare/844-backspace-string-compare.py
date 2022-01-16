@@ -14,5 +14,4 @@ class Solution:
             return res
         sl = clean(sl)
         tl = clean(tl)
-        print(sl,tl)
         return sl == tl
