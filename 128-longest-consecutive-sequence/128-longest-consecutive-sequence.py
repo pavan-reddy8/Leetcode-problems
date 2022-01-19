@@ -6,8 +6,7 @@ class Solution:
             count =1
             if v-1 not in numsset:
                 count = 1
-                while v+1 in numsset:
-                    v = v+1
+                while v+count in numsset:
                     count+=1
             res = max(res,count)
         return res
