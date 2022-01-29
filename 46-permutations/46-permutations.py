@@ -5,7 +5,6 @@ class Solution:
         used=[False]*len(nums)
         def backtrack():
             if len(per) == len(nums):
-                print(per)
                 res.append(per.copy())
                 return
             for i,v in enumerate(nums):
