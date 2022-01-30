@@ -7,10 +7,9 @@ class Solution:
                 if per not in res:
                     res.append(per.copy())
                 return
-            while start < n+1:
-                    per.append(start)
-                    backtrack(start+1)
+            for i in range(start,n+1):
+                    per.append(i)
+                    backtrack(i+1)
                     per.pop()
-                    start+=1
         backtrack(1)
         return res
