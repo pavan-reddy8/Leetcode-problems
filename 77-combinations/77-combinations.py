@@ -2,12 +2,10 @@ class Solution:
     def combine(self, n: int, k: int) -> List[List[int]]:
         res = []
         per =[]
-        flag =[False]*n
         def backtrack(start):
             if len(per) == k:
-                c = per.copy()
-                if c not in res:
-                    res.append(c)
+                if per not in res:
+                    res.append(per.copy())
                 return
             while start < n+1:
                     per.append(start)
