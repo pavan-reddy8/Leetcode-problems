@@ -9,8 +9,8 @@ class Solution:
                 if c not in res:
                     res.append(c)
                 return
-            for i in range(start,n+1):
-                    per.append(i)
+            while start < n+1:
+                    per.append(start)
                     backtrack(start+1)
                     per.pop()
                     start+=1
