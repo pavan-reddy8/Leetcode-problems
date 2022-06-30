@@ -7,7 +7,7 @@ class Solution:
         while l < r:
             
             area = (r-l) * min(h[l],h[r])
-            maxarea = max(maxarea,area)
+            maxarea = area if maxarea < area else maxarea
             if h[l] < h[r]:
                 l+=1
             elif h[l] > h[r]:
