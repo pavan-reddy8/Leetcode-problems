@@ -28,8 +28,6 @@ class Solution:
         for r in range(len(s)):
             d[s[r]] += 1
             while (r-l+1) - max(d.values()) > k:
-                print((r-l+1) - max(d.values()))
-                print(l,r)
                 d[s[l]]-=1
                 l+=1
             count = max(r-l+1,count)
