@@ -13,7 +13,6 @@ class Solution:
             return -1
         for i in matrix:
             val = search(i,target)
-            print(val)
             if  val != -1:
                 return True
         return False
