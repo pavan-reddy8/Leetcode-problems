@@ -8,8 +8,6 @@ class Solution:
         pair.sort()
 
         for i in pair:
-  
-            
             if not st:
                 st.append(i)
             else:
