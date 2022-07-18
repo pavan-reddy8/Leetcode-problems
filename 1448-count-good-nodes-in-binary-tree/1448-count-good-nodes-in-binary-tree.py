@@ -11,18 +11,11 @@ class Solution:
     def dfs(self,root,m):
         if not root:
             return 0
-        if root.val >= m: 
-            l = self.dfs(root.left,root.val)
-            print(root.val)
-        else:
-            l = self.dfs(root.left,m)
-        if root.val >= m: 
-            r = self.dfs(root.right,root.val)
-            print(root.val)
-            r+=1
-        else:
-            r = self.dfs(root.right,m)
+        res = 1 if root.val >= m else 0
+        m = max(m,root.val)
+        l = self.dfs(root.left,m)
+        r = self.dfs(root.right,m)
             
-        return l+r
+        return res +l +r
             
         
