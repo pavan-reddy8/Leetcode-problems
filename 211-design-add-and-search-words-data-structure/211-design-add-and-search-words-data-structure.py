@@ -17,21 +17,23 @@ class WordDictionary:
         cur.last = True
         
     def search(self, word: str) -> bool:
-        def dfs(root,j):
+        def dfs(j, root):
             cur = root
-            for i in range(j,len(word)):
-                if word[i] == '.':
+
+            for i in range(j, len(word)):
+                c = word[i]
+                if c == ".":
                     for child in cur.children.values():
-                        if dfs(child,i+1):
+                        if dfs(i + 1, child):
                             return True
                     return False
                 else:
-                    if word[i] not in cur.children:
+                    if c not in cur.children:
                         return False
-                    cur = cur.children[word[i]]
+                    cur = cur.children[c]
             return cur.last
-
-        return dfs(self.root,0)
+        
+        return dfs(0, self.root)
                 
         
 
