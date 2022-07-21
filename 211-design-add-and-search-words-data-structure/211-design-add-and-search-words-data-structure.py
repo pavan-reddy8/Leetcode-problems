@@ -17,18 +17,28 @@ class WordDictionary:
         cur.last = True
         
     def search(self, word: str) -> bool:
-        def dfs(root,j):
+        def dfs(j, root):
             cur = root
-            for i in range(j,len(word)):
-                if word[i] == '.':
+            n = len(word)
+            for i in range(j, n):
+                c = word[i]
+                if c == ".":
                     for child in cur.children.values():
-                        if dfs(child,i+1):
+                        if dfs(i + 1, child):
                             return True
                     return False
                 else:
-                    if word[i] not in cur.children:
+                    if c not in cur.children:
                         return False
-                    cur = cur.children[word[i]]
+                    cur = cur.children[c]
             return cur.last
+        
+        return dfs(0, self.root)
+                
+        
 
-        return dfs(self.root,0)
+
+# Your WordDictionary object will be instantiated and called as such:
+# obj = WordDictionary()
+# obj.addWord(word)
+# param_2 = obj.search(word)
