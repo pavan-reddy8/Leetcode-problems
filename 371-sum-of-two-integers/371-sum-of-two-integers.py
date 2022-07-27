@@ -44,8 +44,8 @@ class Solution:
         while i <=32:
             bita = a & 1
             bitb = b & 1
-            print("a",bin(bita))
-            print("b",bin(bitb))
+            # print("a",bin(bita))
+            # print("b",bin(bitb))
             a >>= 1
             b >>= 1
             resb = borrow ^ bita ^ bitb
@@ -54,7 +54,7 @@ class Solution:
                 borrow = 1
             else:
                 borrow = 0
-            print(bin(resb),"borrow",borrow)
+            # print(bin(resb),"borrow",borrow)
             resb = resb << i
             res = res | resb
             i += 1
