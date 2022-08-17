@@ -13,7 +13,7 @@ class Solution:
         for [x,y] in edges:
             print(root)
             xr,yr = rec(x),rec(y)
-            print(x,y,xr,yr)
+            # print(x,y,xr,yr)
             if xr==yr:
                 return [x,y]
             elif x==xr:
