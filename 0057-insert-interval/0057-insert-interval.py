@@ -8,7 +8,7 @@ class Solution:
                 break
             
         intervals.insert(l,newInterval)
-        print(intervals,l)
+        # print(intervals,l)
         l,r = 0,1
         res = [intervals[0]]
         while r < len(intervals):
