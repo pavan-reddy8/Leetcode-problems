@@ -7,7 +7,7 @@ class Solution:
         
         visited = set()
         cycle = set()
-        print(d)
+        # print(d)
         def dfs(v,pv):
             # print(cycle)
             if v in cycle:
