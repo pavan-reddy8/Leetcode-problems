@@ -10,9 +10,8 @@ class Solution:
         res = ''
         while heap:
             prev = heapq.heappop(heap)
-            while prev[0] != 0:
-                prev[0]+=1
-                res += prev[1]
+            res += prev[1] * -prev[0] 
+            print(prev[1])
                 
         return res
             
