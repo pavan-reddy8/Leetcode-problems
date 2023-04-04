@@ -3,5 +3,6 @@ class Solution:
         m = len(nums)
         totalsum = ((m+1) * m)//2
         for num in nums:
+            print(totalsum)
             totalsum -= num
         return totalsum
