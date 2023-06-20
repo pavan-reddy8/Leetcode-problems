@@ -8,6 +8,6 @@ class Solution:
                 
             else:
                 k+=1
-            nums.sort()
+
         return k
         
