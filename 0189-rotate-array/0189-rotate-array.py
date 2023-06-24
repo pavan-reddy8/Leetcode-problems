@@ -7,6 +7,6 @@ class Solution:
             ele = nums.pop(len(nums)-1)
             nums.insert(0,ele)
             k-=1
-        print(nums)
+        # print(nums)
             
         
